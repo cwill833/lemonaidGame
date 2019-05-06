@@ -33,9 +33,10 @@ upgradeButton.addEventListener('click', ()=>{
 
 
 function myButton(){
-    let incr = 1;
-    let accMoney = 10;
+    incr = 1;
+    accMoney = 10;
     money.textContent = `${accMoney}$`;
+    console.log(accMoney)
 
     // location.reload();
 };

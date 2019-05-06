@@ -29,7 +29,7 @@ section{
 }
 
 header{
-    height: 20%;
+    height: 25%;
     text-align: center;
 }
 
@@ -59,11 +59,9 @@ div#time, div#money, div#reset {
 }
 
 .icon{
-    width: 8%;
-    height: 30%;
+    width: 10%;
+    height: 35%;
     border-radius: 50%;
-    background-color: black;
-    color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -149,7 +147,7 @@ div#time, div#money, div#reset {
 }
 
 #umbrella{
-    background-image: url(../images/cocktail_umbrella.jpggit);
+    background-image: url(../images/cocktail_umbrella.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
