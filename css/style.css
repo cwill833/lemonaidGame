@@ -19,7 +19,7 @@ aside{
 }
 
 section{
-    background: url(/Users/chriswilliams/fundamentals/project_sei/lemonaid/lemonaidGame/images/67300157-cartoon-lemonade-stand-with-fresh-lemons-and-a-pitcher.jpg) no-repeat;
+    background: url(../images/67300157-cartoon-lemonade-stand-with-fresh-lemons-and-a-pitcher.jpg) no-repeat;
     background-position: center;
     width: 70%;
     display: flex;
