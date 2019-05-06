@@ -1,16 +1,29 @@
 // event handlers
 const sellButton = document.querySelector('.sell');
+const upgradeButton = document.querySelector('.upgrade');
 
+// cached
+let iW = 185;
+let incr = 1;
+
+// event listeners
 sellButton.addEventListener('click', (evt) => {
-    console.log(evt)
-    let iW = 100;
     let grow = document.getElementById('grow1');
     grow.style.width = `${iW}px`;
-    iw++
-    // console.log(grow.style.width.toString());
-    // grow.style.width++;
+    console.log(grow.style.width);
+    if(parseInt(grow.style.width.slice(0,3)) <= parseInt(187)){
+        iW += incr;
+    }
+    if(parseInt(grow.style.width.slice(0,3)) >= parseInt(187)){
+        iW = 0;
+    }
+    console.log(iW)
 })
 
+upgradeButton.addEventListener('click', ()=>{
+    incr ++
+    console.log(incr)
+})
 
 
 
