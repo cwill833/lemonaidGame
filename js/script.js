@@ -22,8 +22,11 @@ sellButton.addEventListener('click', (evt) => {
 })
 
 upgradeButton.addEventListener('click', ()=>{
-    if (incr <= 4){
-    incr ++
+    if (incr <= 4 && accMoney >= 2){
+        accMoney -= 2;
+        console.log(accMoney)
+        money.textContent = `${accMoney}$`;
+        incr ++;
     }
     console.log(incr)
 })
