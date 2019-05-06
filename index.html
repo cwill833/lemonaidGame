@@ -12,12 +12,13 @@
 <body>
     <!-- this will hold timer, money, reset button -->
     <aside>
-        <div id="time">
-            <p>time block</p>
-        </div>
+        <!-- game timer -->
+        <div id="time" value>time</div>
+        <!-- accumulated money -->
         <div id="money">
             <p></p>
         </div>
+        <!-- reset button -->
         <div id="reset" onclick='myButton()'>
             <p>reset button</p>
         </div>
@@ -68,5 +69,6 @@
             </div>
         </div>
     </section>
+    <script>countdown();</script>
 </body>
 </html>

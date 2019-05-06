@@ -32,9 +32,6 @@ upgradeButton.addEventListener('click', ()=>{
 })
 
 
-
-
-
 function myButton(){
     incr = 1;
     accMoney = 10;
