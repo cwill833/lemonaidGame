@@ -126,3 +126,31 @@ div#time, div#money, div#reset {
     flex-direction: column;
     text-align: center;
 }
+
+#pitcher{
+    background-image: url(../images/lemonade-clipart-25.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ice{
+    background-image: url(../images/ice.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#straw{
+    background-image: url(../images/straws.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#umbrella{
+    background-image: url(../images/cocktail_umbrella.jpggit);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
