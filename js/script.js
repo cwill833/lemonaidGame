@@ -29,7 +29,7 @@ sellButtonIce.addEventListener('click', function(){
             document.getElementById('grow2').style.width = fill2 + '%';
             console.log(fill2);
         }else{
-            money.textContent = `${accMoney += 1}$`;
+            money.textContent = `${accMoney += 2}$`;
             fill2 = 0;
             document.getElementById('grow2').style.width = fill2 + '%';
             clearInterval(int);
@@ -45,7 +45,7 @@ sellButtonStraw.addEventListener('click', function(){
             document.getElementById('grow3').style.width = fill3 + '%';
             console.log(fill3);
         }else{
-            money.textContent = `${accMoney += 1}$`;
+            money.textContent = `${accMoney += 3}$`;
             fill3 = 0;
             document.getElementById('grow3').style.width = fill3 + '%';
             clearInterval(int);
@@ -61,7 +61,7 @@ sellButtonUmbrella.addEventListener('click', function(){
             document.getElementById('grow4').style.width = fill4 + '%';
             console.log(fill4);
         }else{
-            money.textContent = `${accMoney += 1}$`;
+            money.textContent = `${accMoney += 4}$`;
             fill4 = 0;
             document.getElementById('grow4').style.width = fill4 + '%';
             clearInterval(int);
@@ -78,6 +78,8 @@ upgradeButton.addEventListener('click', ()=>{
     }
     console.log(incr)
 })
+
+// functions
 
 function load_bar(){
     int = setInterval(function(){
@@ -100,7 +102,4 @@ function myButton(){
     incr = 1;
     accMoney = 10;
     money.textContent = `${accMoney}$`;
-    console.log(accMoney)
-
-    // location.reload();
 };
