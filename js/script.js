@@ -10,7 +10,7 @@ const upgradeButtonUmbrella = document.getElementById('upgradeUmbrella');
 const money = document.getElementById('money');
 const timer = document.getElementById('time');
 const highscore = document.getElementById('highscore');
-
+const lets_play = document.getElementById('start');
 
 // cached
 let fill1 = 0;
@@ -31,6 +31,13 @@ let time = 180;
 let score = 0;
 
 // event listeners
+
+lets_play.addEventListener('click', function(){
+    document.querySelector('home').style.display = 'none';
+    document.querySelector('.game').style.display = 'flex';
+    init();
+})
+
 sellButtonPitcher.addEventListener('click', function(){
     let int = setInterval(function(){
             if(fill1 < 100){
@@ -139,7 +146,7 @@ upgradeButtonUmbrella.addEventListener('click', ()=>{
 })
 // functions
 
-init();
+render();
 
 function init(){
     render();
