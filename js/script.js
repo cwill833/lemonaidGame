@@ -27,7 +27,7 @@ let ticks3 = 0;
 let ticks4 = 0;
 let accMoney = 10;
 let timerrr;
-let time = 180;
+let time = 10;
 let score = 0;
 
 // event listeners
@@ -173,15 +173,26 @@ function countdown(){
                 score = accMoney;
                 highscore.textContent = `Highscore: ${score}`;
                 stop();
+                timer.textContent = `GAME OVER`;
+            }
+            if(score >= accMoney){
+                winner();
+                score = accMoney;
+                highscore.textContent = `Highscore: ${score}`;
+                stop();
+                timer.textContent = `GAME OVER`;
             }
         }
-    }, 1000)
+    }, 500)
 }
 
 function winner(){
     if(score < accMoney){
-        console.log('congratulations! You beat the highscore!')
-    }
+        swal("Great job!", `You beat your high score and earned ${accMoney}$ dollars! Can you do it again...`, "success")
+    } else {
+         console.log(score, 'hay')
+         swal("AWWWW MAN!", "Almost but you didn't make as much this time...", "error");
+     }
 }
 
 function stop(){
@@ -189,13 +200,21 @@ function stop(){
     document.getElementById('iceB').style.pointerEvents = 'none';
     document.getElementById('strawB').style.pointerEvents = 'none';
     document.getElementById('umbrellaB').style.pointerEvents = 'none';
+    document.getElementById('upgradePitcher').style.pointerEvents = 'none';
+    document.getElementById('upgradeIce').style.pointerEvents = 'none';
+    document.getElementById('upgradeStraw').style.pointerEvents = 'none';
+    document.getElementById('upgradeUmbrella').style.pointerEvents = 'none'
 }
 
 function start(){
     document.getElementById('pitcherB').style.pointerEvents = 'auto';
     document.getElementById('iceB').style.pointerEvents = 'auto';
     document.getElementById('strawB').style.pointerEvents = 'auto';
-    document.getElementById('umbrellaB').style.pointerEvents = 'auto';    
+    document.getElementById('umbrellaB').style.pointerEvents = 'auto';
+    document.getElementById('upgradePitcher').style.pointerEvents = 'auto';
+    document.getElementById('upgradeIce').style.pointerEvents = 'auto';
+    document.getElementById('upgradeStraw').style.pointerEvents = 'auto';
+    document.getElementById('upgradeUmbrella').style.pointerEvents = 'auto'
 }
 
 
@@ -209,7 +228,7 @@ function myButton(){
     ticks3 = 0;
     ticks4 = 0;
     accMoney = 10;
-    time = 180;
+    time = 10;
     render();
     clearInterval(timerrr)
     start();
