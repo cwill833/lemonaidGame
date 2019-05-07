@@ -72,6 +72,7 @@ div#time, div#money, div#highscore, div#reset {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .buttonCasing{
@@ -81,6 +82,7 @@ div#time, div#money, div#highscore, div#reset {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .statusBar{
@@ -103,8 +105,8 @@ div#time, div#money, div#highscore, div#reset {
 }
 
 .moneyBar{
-    height: 32%;
-    width: 75%;
+    height: 39%;
+    width: 82%;
     border-radius: 20px;
     display: flex;
     justify-content: space-evenly;
