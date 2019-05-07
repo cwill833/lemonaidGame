@@ -27,7 +27,8 @@ let ticks3 = 0;
 let ticks4 = 0;
 let accMoney = 10;
 let timerrr;
-let time = 10;
+let time = 180;
+let score = 0;
 
 // event listeners
 sellButtonPitcher.addEventListener('click', function(){
@@ -37,7 +38,7 @@ sellButtonPitcher.addEventListener('click', function(){
                 document.getElementById('grow1').style.width = fill1 + '%';
                 document.getElementById('pitcherB').style.pointerEvents = 'none';
             }else{
-                money.textContent = `${accMoney += 1}$`;
+                money.textContent = `Money: ${accMoney+=1}$`;
                 fill1 = 0;
                 document.getElementById('grow1').style.width = fill1 + '%';
                 clearInterval(int);
@@ -53,7 +54,7 @@ sellButtonIce.addEventListener('click', function(){
             document.getElementById('grow2').style.width = fill2 + '%';
             document.getElementById('iceB').style.pointerEvents = 'none';
         }else{
-            money.textContent = `${accMoney += 2}$`;
+            money.textContent = `Money: ${accMoney += 2}$`;
             fill2 = 0;
             document.getElementById('grow2').style.width = fill2 + '%';
             clearInterval(int);
@@ -70,7 +71,7 @@ sellButtonStraw.addEventListener('click', function(){
             document.getElementById('grow3').style.width = fill3 + '%';
             document.getElementById('strawB').style.pointerEvents = 'none';
         }else{
-            money.textContent = `${accMoney += 3}$`;
+            money.textContent = `Money: ${accMoney += 3}$`;
             fill3 = 0;
             document.getElementById('grow3').style.width = fill3 + '%';
             clearInterval(int);
@@ -87,7 +88,7 @@ sellButtonUmbrella.addEventListener('click', function(){
             document.getElementById('grow4').style.width = fill4 + '%';
             document.getElementById('umbrellaB').style.pointerEvents = 'none';
         }else{
-            money.textContent = `${accMoney += 4}$`;
+            money.textContent = `Money: ${accMoney += 4}$`;
             fill4 = 0;
             document.getElementById('grow4').style.width = fill4 + '%';
             clearInterval(int);
@@ -101,7 +102,7 @@ upgradeButtonPitcher.addEventListener('click', ()=>{
     let incr = 100;
     if (ticks1 <= 2 && accMoney >= 2){
         accMoney -= 2;
-        money.textContent = `${accMoney}$`;
+        money.textContent = `Money: ${accMoney}$`;
         speed1 -= incr;
         ticks1++
     }
@@ -111,7 +112,7 @@ upgradeButtonIce.addEventListener('click', ()=>{
     let incr = 125;
     if (ticks2 <= 2 && accMoney >= 4){
         accMoney -= 4;
-        money.textContent = `${accMoney}$`;
+        money.textContent = `Money: ${accMoney}$`;
         speed2 -= incr;
         ticks2++
     }
@@ -121,7 +122,7 @@ upgradeButtonStraw.addEventListener('click', ()=>{
     let incr = 150;
     if (ticks3 <= 2 && accMoney >= 6){
         accMoney -= 6;
-        money.textContent = `${accMoney}$`;
+        money.textContent = `Money: ${accMoney}$`;
         speed3 -= incr;
         ticks3++
     }
@@ -131,7 +132,7 @@ upgradeButtonUmbrella.addEventListener('click', ()=>{
     let incr = 175;
     if (ticks4 <= 2 && accMoney >= 8){
         accMoney -= 8;
-        money.textContent = `${accMoney}$`;
+        money.textContent = `Money: ${accMoney}$`;
         speed4 -= incr;
         ticks4++
     }
@@ -141,15 +142,14 @@ upgradeButtonUmbrella.addEventListener('click', ()=>{
 init();
 
 function init(){
-    money.textContent = `${accMoney}$`;
-    timer.textContent = time;
-    highscore.textContent = 0;
+    render();
     countdown();
 }
 
 function render(){
-    money.textContent = `${accMoney}$`;
-    timer.textContent = 180;
+    money.textContent = `Money: ${accMoney}$`;
+    highscore.textContent = `Highscore: ${score}`
+    timer.textContent = time;
 }
 
 function countdown(){
@@ -160,16 +160,18 @@ function countdown(){
             timer.textContent = time;
         }else{
             clearInterval(timerrr);
-            if(parseInt(highscore.textContent) < accMoney){
-                highscore.textContent = `${accMoney}$`;
+            console.log(highscore.textContent.slice(11))
+            if(score < accMoney){
                 winner();
+                score = accMoney;
+                highscore.textContent = `Highscore: ${score}`;
             }
         }
     }, 1000)
 }
 
 function winner(){
-    if(parseInt(highscore.textContent) < accMoney){
+    if(score < accMoney){
         console.log('congratulations! You beat the highscore!')
     }
 }
