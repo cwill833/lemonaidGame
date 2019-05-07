@@ -26,7 +26,7 @@ let ticks2 = 0;
 let ticks3 = 0;
 let ticks4 = 0;
 let accMoney = 10;
-let time = 10;
+let time = 180;
 
 // event listeners
 sellButtonPitcher.addEventListener('click', load_bar)
@@ -36,11 +36,13 @@ sellButtonIce.addEventListener('click', function(){
         if(fill2 < 100){
             fill2 +=25;
             document.getElementById('grow2').style.width = fill2 + '%';
+            document.getElementById('iceB').style.pointerEvents = 'none';
         }else{
             money.textContent = `${accMoney += 2}$`;
             fill2 = 0;
             document.getElementById('grow2').style.width = fill2 + '%';
             clearInterval(int);
+            document.getElementById('iceB').style.pointerEvents = 'auto';
         }
     }, speed2);
     console.log(int)
@@ -51,12 +53,13 @@ sellButtonStraw.addEventListener('click', function(){
         if(fill3 < 100){
             fill3 +=25;
             document.getElementById('grow3').style.width = fill3 + '%';
-            console.log(fill3);
+            document.getElementById('strawB').style.pointerEvents = 'none';
         }else{
             money.textContent = `${accMoney += 3}$`;
             fill3 = 0;
             document.getElementById('grow3').style.width = fill3 + '%';
             clearInterval(int);
+            document.getElementById('strawB').style.pointerEvents = 'auto';
         }
     }, speed3);
     
@@ -67,11 +70,13 @@ sellButtonUmbrella.addEventListener('click', function(){
         if(fill4 < 100){
             fill4 +=25;
             document.getElementById('grow4').style.width = fill4 + '%';
+            document.getElementById('umbrellaB').style.pointerEvents = 'none';
         }else{
             money.textContent = `${accMoney += 4}$`;
             fill4 = 0;
             document.getElementById('grow4').style.width = fill4 + '%';
             clearInterval(int);
+            document.getElementById('umbrellaB').style.pointerEvents = 'auto';
         }
     }, speed4);
     
@@ -148,21 +153,18 @@ function countdown(){
 }
 
 function load_bar(){
-    let running = false;
     let int = setInterval(function(){
-        if(!running){
             if(fill1 < 100){
-                running = true;
                 fill1 +=25;
                 document.getElementById('grow1').style.width = fill1 + '%';
+                document.getElementById('pitcherB').style.pointerEvents = 'none';
             }else{
                 money.textContent = `${accMoney += 1}$`;
                 fill1 = 0;
                 document.getElementById('grow1').style.width = fill1 + '%';
                 clearInterval(int);
-                running = false;
+                document.getElementById('pitcherB').style.pointerEvents = 'auto';
         }
-    }
     }, speed1);
 }
 
