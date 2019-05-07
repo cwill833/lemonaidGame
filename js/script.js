@@ -9,6 +9,7 @@ const upgradeButtonStraw = document.getElementById('upgradeStraw');
 const upgradeButtonUmbrella = document.getElementById('upgradeUmbrella');
 const money = document.getElementById('money');
 const timer = document.getElementById('time');
+const highscore = document.getElementById('highscore');
 
 
 // cached
@@ -25,7 +26,7 @@ let ticks2 = 0;
 let ticks3 = 0;
 let ticks4 = 0;
 let accMoney = 10;
-let timer = 0;
+let time = 10;
 
 // event listeners
 sellButtonPitcher.addEventListener('click', load_bar)
@@ -46,7 +47,7 @@ sellButtonIce.addEventListener('click', function(){
 })
 
 sellButtonStraw.addEventListener('click', function(){
-   let int = setInterval(function(){
+    let int = setInterval(function(){
         if(fill3 < 100){
             fill3 +=25;
             document.getElementById('grow3').style.width = fill3 + '%';
@@ -62,7 +63,7 @@ sellButtonStraw.addEventListener('click', function(){
 })
 
 sellButtonUmbrella.addEventListener('click', function(){
-   let int = setInterval(function(){
+    let int = setInterval(function(){
         if(fill4 < 100){
             fill4 +=25;
             document.getElementById('grow4').style.width = fill4 + '%';
@@ -87,17 +88,17 @@ upgradeButtonPitcher.addEventListener('click', ()=>{
 })
 
 upgradeButtonIce.addEventListener('click', ()=>{
-    let incr = 150;
+    let incr = 125;
     if (ticks2 <= 2 && accMoney >= 4){
         accMoney -= 4;
         money.textContent = `${accMoney}$`;
-        speed3 -= incr;
+        speed2 -= incr;
         ticks2++
     }
 })
 
 upgradeButtonStraw.addEventListener('click', ()=>{
-    let incr = 200;
+    let incr = 150;
     if (ticks3 <= 2 && accMoney >= 6){
         accMoney -= 6;
         money.textContent = `${accMoney}$`;
@@ -107,7 +108,7 @@ upgradeButtonStraw.addEventListener('click', ()=>{
 })
 
 upgradeButtonUmbrella.addEventListener('click', ()=>{
-    let incr = 250;
+    let incr = 175;
     if (ticks4 <= 2 && accMoney >= 8){
         accMoney -= 8;
         money.textContent = `${accMoney}$`;
@@ -121,19 +122,47 @@ init();
 
 function init(){
     money.textContent = `${accMoney}$`;
+    timer.textContent = time;
+    highscore.textContent = 0;
+    countdown();
+}
+
+function render(){
+    money.textContent = `${accMoney}$`;
+    timer.textContent = 180;
+}
+
+function countdown(){
+    let timerrr = setInterval(function (){
+        time--;
+        timer.textContent = time
+        if(time){
+            timer.textContent = time;
+        }else{
+            clearInterval(timerrr);
+            if(parseInt(highscore.textContent) < accMoney){
+                highscore.textContent = `${accMoney}$`;
+            }
+        }
+    }, 1000)
 }
 
 function load_bar(){
-   let int = setInterval(function(){
-        if(fill1 < 100){
-            fill1 +=25;
-            document.getElementById('grow1').style.width = fill1 + '%';
-        }else{
-            money.textContent = `${accMoney += 1}$`;
-            fill1 = 0;
-            document.getElementById('grow1').style.width = fill1 + '%';
-            clearInterval(int);
+    let running = false;
+    let int = setInterval(function(){
+        if(!running){
+            if(fill1 < 100){
+                running = true;
+                fill1 +=25;
+                document.getElementById('grow1').style.width = fill1 + '%';
+            }else{
+                money.textContent = `${accMoney += 1}$`;
+                fill1 = 0;
+                document.getElementById('grow1').style.width = fill1 + '%';
+                clearInterval(int);
+                running = false;
         }
+    }
     }, speed1);
 }
 
@@ -148,5 +177,8 @@ function myButton(){
     ticks3 = 0;
     ticks4 = 0;
     accMoney = 10;
-    money.textContent = `${accMoney}$`;
+    time = 180;
+    render();
+    clearInterval(timerrr)
+    countdown();
 };
