@@ -26,10 +26,25 @@ let ticks2 = 0;
 let ticks3 = 0;
 let ticks4 = 0;
 let accMoney = 10;
-let time = 180;
+let timerrr;
+let time = 10;
 
 // event listeners
-sellButtonPitcher.addEventListener('click', load_bar)
+sellButtonPitcher.addEventListener('click', function(){
+    let int = setInterval(function(){
+            if(fill1 < 100){
+                fill1 +=25;
+                document.getElementById('grow1').style.width = fill1 + '%';
+                document.getElementById('pitcherB').style.pointerEvents = 'none';
+            }else{
+                money.textContent = `${accMoney += 1}$`;
+                fill1 = 0;
+                document.getElementById('grow1').style.width = fill1 + '%';
+                clearInterval(int);
+                document.getElementById('pitcherB').style.pointerEvents = 'auto';
+        }
+    }, speed1);
+})
 
 sellButtonIce.addEventListener('click', function(){
     let int = setInterval(function(){
@@ -138,34 +153,25 @@ function render(){
 }
 
 function countdown(){
-    let timerrr = setInterval(function (){
+    timerrr = setInterval(function (){
         time--;
-        timer.textContent = time
+        timer.textContent = time;
         if(time){
             timer.textContent = time;
         }else{
             clearInterval(timerrr);
             if(parseInt(highscore.textContent) < accMoney){
                 highscore.textContent = `${accMoney}$`;
+                winner();
             }
         }
     }, 1000)
 }
 
-function load_bar(){
-    let int = setInterval(function(){
-            if(fill1 < 100){
-                fill1 +=25;
-                document.getElementById('grow1').style.width = fill1 + '%';
-                document.getElementById('pitcherB').style.pointerEvents = 'none';
-            }else{
-                money.textContent = `${accMoney += 1}$`;
-                fill1 = 0;
-                document.getElementById('grow1').style.width = fill1 + '%';
-                clearInterval(int);
-                document.getElementById('pitcherB').style.pointerEvents = 'auto';
-        }
-    }, speed1);
+function winner(){
+    if(parseInt(highscore.textContent) < accMoney){
+        console.log('congratulations! You beat the highscore!')
+    }
 }
 
 
