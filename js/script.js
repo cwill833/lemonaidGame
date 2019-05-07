@@ -149,15 +149,15 @@ function init(){
 function render(){
     money.textContent = `Money: ${accMoney}$`;
     highscore.textContent = `Highscore: ${score}`
-    timer.textContent = time;
+    timer.textContent = `Time left: ${time}`;
 }
 
 function countdown(){
     timerrr = setInterval(function (){
         time--;
-        timer.textContent = time;
+        timer.textContent = `Time left: ${time}`;
         if(time){
-            timer.textContent = time;
+            timer.textContent = `Time left: ${time}`;
         }else{
             clearInterval(timerrr);
             console.log(highscore.textContent.slice(11))
@@ -165,6 +165,7 @@ function countdown(){
                 winner();
                 score = accMoney;
                 highscore.textContent = `Highscore: ${score}`;
+                stop();
             }
         }
     }, 1000)
@@ -174,6 +175,20 @@ function winner(){
     if(score < accMoney){
         console.log('congratulations! You beat the highscore!')
     }
+}
+
+function stop(){
+    document.getElementById('pitcherB').style.pointerEvents = 'none';
+    document.getElementById('iceB').style.pointerEvents = 'none';
+    document.getElementById('strawB').style.pointerEvents = 'none';
+    document.getElementById('umbrellaB').style.pointerEvents = 'none';
+}
+
+function start(){
+    document.getElementById('pitcherB').style.pointerEvents = 'auto';
+    document.getElementById('iceB').style.pointerEvents = 'auto';
+    document.getElementById('strawB').style.pointerEvents = 'auto';
+    document.getElementById('umbrellaB').style.pointerEvents = 'auto';    
 }
 
 
@@ -190,5 +205,6 @@ function myButton(){
     time = 180;
     render();
     clearInterval(timerrr)
+    start();
     countdown();
 };
