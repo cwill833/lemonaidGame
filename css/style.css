@@ -89,9 +89,9 @@ div#time, div#money, div#reset {
 }
 
 /* this is to add color to status bar*/
-.statusBar > span{
+.statusBar > div{
     display: block;
-    width: 50px;
+    width: 0%;
     height: 100%;
     border-radius: 20px;
     background-color: green;
