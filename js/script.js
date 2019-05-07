@@ -1,10 +1,15 @@
-// event handlers
+// event handles
 const sellButtonPitcher = document.getElementById('pitcherB');
 const sellButtonIce = document.getElementById('iceB');
 const sellButtonStraw = document.getElementById('strawB');
 const sellButtonUmbrella = document.getElementById('umbrellaB');
-const upgradeButtonIce = document.querySelector('.upgrade');
+const upgradeButtonPitcher = document.getElementById('upgradePitcher');
+const upgradeButtonIce = document.getElementById('upgradeIce');
+const upgradeButtonStraw = document.getElementById('upgradeStraw');
+const upgradeButtonUmbrella = document.getElementById('upgradeUmbrella');
 const money = document.getElementById('money');
+const timer = document.getElementById('time');
+
 
 // cached
 let fill1 = 0;
@@ -15,8 +20,12 @@ let speed1 = 500;
 let speed2 = 750;
 let speed3 = 1000;
 let speed4 = 1250;
-let ticks = 0;
+let ticks1 = 0;
+let ticks2 = 0;
+let ticks3 = 0;
+let ticks4 = 0;
 let accMoney = 10;
+let timer = 0;
 
 // event listeners
 sellButtonPitcher.addEventListener('click', load_bar)
@@ -67,16 +76,45 @@ sellButtonUmbrella.addEventListener('click', function(){
     
 })
 
-upgradeButtonIce.addEventListener('click', ()=>{
+upgradeButtonPitcher.addEventListener('click', ()=>{
     let incr = 100;
-    if (ticks <= 2 && accMoney >= 2){
+    if (ticks1 <= 2 && accMoney >= 2){
         accMoney -= 2;
         money.textContent = `${accMoney}$`;
         speed1 -= incr;
-        ticks++
+        ticks1++
     }
 })
 
+upgradeButtonIce.addEventListener('click', ()=>{
+    let incr = 150;
+    if (ticks2 <= 2 && accMoney >= 4){
+        accMoney -= 4;
+        money.textContent = `${accMoney}$`;
+        speed3 -= incr;
+        ticks2++
+    }
+})
+
+upgradeButtonStraw.addEventListener('click', ()=>{
+    let incr = 200;
+    if (ticks3 <= 2 && accMoney >= 6){
+        accMoney -= 6;
+        money.textContent = `${accMoney}$`;
+        speed3 -= incr;
+        ticks3++
+    }
+})
+
+upgradeButtonUmbrella.addEventListener('click', ()=>{
+    let incr = 250;
+    if (ticks4 <= 2 && accMoney >= 8){
+        accMoney -= 8;
+        money.textContent = `${accMoney}$`;
+        speed4 -= incr;
+        ticks4++
+    }
+})
 // functions
 
 init();
@@ -105,7 +143,10 @@ function myButton(){
     speed2 = 750;
     speed3 = 1000;
     speed4 = 1250;
-    ticks = 0;
+    ticks1 = 0;
+    ticks2 = 0;
+    ticks3 = 0;
+    ticks4 = 0;
     accMoney = 10;
     money.textContent = `${accMoney}$`;
 };
