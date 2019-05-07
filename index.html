@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lemonade game!</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
 </head>
 <body>
-    <!-- this will hold timer, money, reset button -->
+    <!-- this will hold timer, money, reset values -->
     <aside>
         <!-- game timer -->
         <div id="time" value>time</div>
@@ -19,21 +18,20 @@
         <!-- reset button -->
         <div id="reset" onclick='myButton()'><p>reset button</p></div>
     </aside>
-    <!-- this will hold buttons -->
     <section>
         <header>
             <h1>How much money can you make?</h1>
             <h3>Click on a button to start accumulating cash!</h3>
         </header>
+        <!-- this will hold game buttons for top layer-->
         <div id="topLevel">
             <div class="icon" id="pitcher"></div>
             <div class="buttonCasing">
                 <div class="statusBar">
-                    <!-- this is to add color to status bar -->
                     <div id="grow1"></div>
                 </div>
                 <div class="moneyBar">
-                    <div class="sell" id="pitcherB">SELL!</div>
+                    <div class="sell" id="pitcherB">SELL! +1</div>
                     <div class="upgrade">Upgrade</div>
                 </div>
             </div>
@@ -43,11 +41,12 @@
                     <div id="grow2"></div>
                 </div>
                 <div class="moneyBar">
-                    <div class="sell" id="iceB">SELL!</div>
+                    <div class="sell" id="iceB">SELL! +2</div>
                     <div class="upgrade">Upgrade</div>
                 </div>
             </div>
         </div>
+        <!-- this will hold game buttons for bottom layer-->
         <div id="lowerLevel">
             <div class="icon" id="straw"></div>
             <div class="buttonCasing">
@@ -55,7 +54,7 @@
                     <div id="grow3"></div>
                 </div>
                 <div class="moneyBar">
-                    <div class="sell" id="strawB">SELL!</div>
+                    <div class="sell" id="strawB">SELL! +3</div>
                     <div class="upgrade">Upgrade</div>
                 </div>
             </div>
@@ -65,7 +64,7 @@
                     <div id="grow4"></div>
                 </div>
                 <div class="moneyBar">
-                    <div class="sell" id="umbrellaB">SELL!</div>
+                    <div class="sell" id="umbrellaB">SELL! +4</div>
                     <div class="upgrade">Upgrade</div>
                 </div>
             </div>
