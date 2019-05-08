@@ -1,4 +1,5 @@
-// event handles
+/* --- event handles --- */
+
 const sellButtonPitcher = document.getElementById('pitcherB');
 const sellButtonIce = document.getElementById('iceB');
 const sellButtonStraw = document.getElementById('strawB');
@@ -12,15 +13,16 @@ const timer = document.getElementById('time');
 const highscore = document.getElementById('highscore');
 const lets_play = document.getElementById('start');
 
-// cached
+/* --- cached --- */
+
 let fill1 = 0;
 let fill2 = 0;
 let fill3 = 0;
 let fill4 = 0;
 let speed1 = 500;
-let speed2 = 750;
-let speed3 = 1000;
-let speed4 = 1250;
+let speed2 = 700;
+let speed3 = 900;
+let speed4 = 1100;
 let ticks1 = 0;
 let ticks2 = 0;
 let ticks3 = 0;
@@ -31,7 +33,9 @@ let time = 100;
 let score = 0;
 let compare = 0;
 
-// event listeners
+/* --- event listeners --- */
+
+// this will handle the sell buttons
 
 lets_play.addEventListener('click', function(){
     document.querySelector('home').style.display = 'none';
@@ -108,6 +112,8 @@ sellButtonUmbrella.addEventListener('click', function(){
     }, speed4);
     
 })
+
+// this will handle the upgrade buttons
 
 upgradeButtonPitcher.addEventListener('click', ()=>{
     let incr = 100;
@@ -186,11 +192,9 @@ function countdown(){
         timer.textContent = `Time left: ${time}`;
         if(time){
             timer.textContent = `Time left: ${time}`;
-            console.log(score, accMoney)
         }else{
             clearInterval(timerrr);
             compare = accMoney;
-            console.log(score, compare, accMoney, 'new')
             if(score < compare){
                 winner();
                 score = accMoney;
@@ -215,6 +219,9 @@ function winner(){
      }
 }
 
+// this will prevent buttons from activating when game is
+// over
+
 function stop(){
     document.getElementById('pitcherB').style.pointerEvents = 'none';
     document.getElementById('iceB').style.pointerEvents = 'none';
@@ -225,6 +232,8 @@ function stop(){
     document.getElementById('upgradeStraw').style.pointerEvents = 'none';
     document.getElementById('upgradeUmbrella').style.pointerEvents = 'none'
 }
+
+// this will start the functionality up when reset is clicked
 
 function start(){
     document.getElementById('pitcherB').style.pointerEvents = 'auto';
@@ -237,6 +246,7 @@ function start(){
     document.getElementById('upgradeUmbrella').style.pointerEvents = 'auto'
 }
 
+// reset button
 
 function myButton(){
     speed1 = 500;

@@ -79,28 +79,38 @@ h4 span{
     font-size: 1.4em
 }
 
-.homeSell{
+.homeSell, .homeUpgrade{
     width: 17%;
     height: 30px;
     margin: 2%;
     border-radius: 20px;
-    background-color: green;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
 }
+.homeSell{
+    background: #65d6d4;
+    background: -webkit-linear-gradient(top, #269649, #65d6d4);
+    background: -moz-linear-gradient(top, #269649, #65d6d4);
+    background: -ms-linear-gradient(top, #269649, #65d6d4);
+    background: -o-linear-gradient(top, #269649, #65d6d4);
+    border-top: 1px solid #bff797;
+    box-shadow: rgba(0,0,0,.7) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+}
 
 .homeUpgrade{
-    width: 17%;
-    height: 30px;
-    margin: 2%;
-    border-radius: 20px;
-    background-color: pink;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    border-top: 1px solid #98d4f5;
+    background: #65d6d4;
+    background: -webkit-linear-gradient(top, #2e2694, #65d6d4);
+    background: -moz-linear-gradient(top, #2e2694, #65d6d4);
+    background: -ms-linear-gradient(top, #2e2694, #65d6d4);
+    background: -o-linear-gradient(top, #2e2694, #65d6d4);
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
 }
 
 #start{
@@ -232,12 +242,50 @@ div#time, div#money, div#highscore, div#reset {
     text-align: center;
     cursor:pointer;
 }
+
 .sell{
-    background-color: green;
+    background: #65d6d4;
+    background: -webkit-linear-gradient(top, #269649, #65d6d4);
+    background: -moz-linear-gradient(top, #269649, #65d6d4);
+    background: -ms-linear-gradient(top, #269649, #65d6d4);
+    background: -o-linear-gradient(top, #269649, #65d6d4);
+    border-top: 1px solid #bff797;
+    box-shadow: rgba(0,0,0,.7) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+}
+
+.sell:hover {
+    border-top-color: #279c67;
+    background: #279c67;
+    color: #ccc;
+}
+.sell:active {
+    border-top-color: #07300d;
+    background: #07300d;
 }
 
 .upgrade{
-    background-color: pink;
+    border-top: 1px solid #98d4f5;
+    background: #65d6d4;
+    background: -webkit-linear-gradient(top, #2e2694, #65d6d4);
+    background: -moz-linear-gradient(top, #2e2694, #65d6d4);
+    background: -ms-linear-gradient(top, #2e2694, #65d6d4);
+    background: -o-linear-gradient(top, #2e2694, #65d6d4);
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+}
+
+.upgrade:hover {
+    border-top-color: #277d9c;
+    background: #277d9c;
+    color: #ccc;
+}
+
+.upgrade:active {
+    border-top-color: #08244d;
+    background: #08244d;
 }
 
 #pitcher{
