@@ -349,7 +349,7 @@ header h1{
 }
 
 @media only screen and (max-width: 768px){
-    html{
+    * {
         touch-action: manipulation;
     }
     section.landing{
@@ -442,7 +442,7 @@ header h1{
 }
 
 @media only screen and (max-width: 480px){
-    html{
+    * {
         touch-action: manipulation;
     }
     section.landing{
