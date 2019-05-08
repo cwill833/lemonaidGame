@@ -455,8 +455,12 @@ header h1{
         touch-action: manipulation;
     }
 
-    home, section.game{
-        width: 80%;
+    section.game, home{
+        width: 70%;
+    }
+
+    aside{
+        width: 30%;
     }
 
     section.landing{
