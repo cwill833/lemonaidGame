@@ -19,10 +19,10 @@ let fill1 = 0;
 let fill2 = 0;
 let fill3 = 0;
 let fill4 = 0;
-let speed1 = 500;
-let speed2 = 700;
-let speed3 = 900;
-let speed4 = 1100;
+let speed1 = 50;
+let speed2 = 100;
+let speed3 = 200;
+let speed4 = 400;
 let ticks1 = 0;
 let ticks2 = 0;
 let ticks3 = 0;
@@ -47,7 +47,7 @@ sellButtonPitcher.addEventListener('click', function(){
     document.getElementById('pitcherB').style.pointerEvents = 'none';
     let int = setInterval(function(){
             if(fill1 < 100){
-                fill1 +=25;
+                fill1 +=5;
                 document.getElementById('grow1').style.width = fill1 + '%';
                 document.getElementById('pitcherB').style.pointerEvents = 'none';
             }else{
@@ -64,7 +64,7 @@ sellButtonIce.addEventListener('click', function(){
     document.getElementById('iceB').style.pointerEvents = 'none';
     let int = setInterval(function(){
         if(fill2 < 100){
-            fill2 +=25;
+            fill2 +=5;
             document.getElementById('grow2').style.width = fill2 + '%';
             document.getElementById('iceB').style.pointerEvents = 'none';
         }else{
@@ -81,7 +81,7 @@ sellButtonStraw.addEventListener('click', function(){
     document.getElementById('strawB').style.pointerEvents = 'none';
     let int = setInterval(function(){
         if(fill3 < 100){
-            fill3 +=25;
+            fill3 +=5;
             document.getElementById('grow3').style.width = fill3 + '%';
             document.getElementById('strawB').style.pointerEvents = 'none';
         }else{
@@ -99,7 +99,7 @@ sellButtonUmbrella.addEventListener('click', function(){
     document.getElementById('umbrellaB').style.pointerEvents = 'none';
     let int = setInterval(function(){
         if(fill4 < 100){
-            fill4 +=25;
+            fill4 +=5;
             document.getElementById('grow4').style.width = fill4 + '%';
             document.getElementById('umbrellaB').style.pointerEvents = 'none';
         }else{
@@ -116,7 +116,7 @@ sellButtonUmbrella.addEventListener('click', function(){
 // this will handle the upgrade buttons
 
 upgradeButtonPitcher.addEventListener('click', ()=>{
-    let incr = 100;
+    let incr = 10;
     if (ticks1 <= 2 && accMoney >= 2){
         accMoney -= 2;
         money.textContent = `Money: ${accMoney}$`;
@@ -130,7 +130,7 @@ upgradeButtonPitcher.addEventListener('click', ()=>{
 })
 
 upgradeButtonIce.addEventListener('click', ()=>{
-    let incr = 125;
+    let incr = 15;
     if (ticks2 <= 2 && accMoney >= 4){
         accMoney -= 4;
         money.textContent = `Money: ${accMoney}$`;
@@ -144,7 +144,7 @@ upgradeButtonIce.addEventListener('click', ()=>{
 })
 
 upgradeButtonStraw.addEventListener('click', ()=>{
-    let incr = 150;
+    let incr = 20;
     if (ticks3 <= 2 && accMoney >= 6){
         accMoney -= 6;
         money.textContent = `Money: ${accMoney}$`;
@@ -158,7 +158,7 @@ upgradeButtonStraw.addEventListener('click', ()=>{
 })
 
 upgradeButtonUmbrella.addEventListener('click', ()=>{
-    let incr = 175;
+    let incr = 35;
     if (ticks4 <= 2 && accMoney >= 8){
         accMoney -= 8;
         money.textContent = `Money: ${accMoney}$`;
@@ -253,10 +253,10 @@ function start(){
 // reset button
 
 function myButton(){
-    speed1 = 500;
-    speed2 = 750;
-    speed3 = 1000;
-    speed4 = 1250;
+    speed1 = 50;
+    speed2 = 100;
+    speed3 = 200;
+    speed4 = 400;
     ticks1 = 0;
     ticks2 = 0;
     ticks3 = 0;
