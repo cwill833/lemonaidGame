@@ -40,6 +40,7 @@ lets_play.addEventListener('click', function(){
 })
 
 sellButtonPitcher.addEventListener('click', function(){
+    document.getElementById('pitcherB').style.pointerEvents = 'none';
     let int = setInterval(function(){
             if(fill1 < 100){
                 fill1 +=25;
@@ -56,6 +57,7 @@ sellButtonPitcher.addEventListener('click', function(){
 })
 
 sellButtonIce.addEventListener('click', function(){
+    document.getElementById('iceB').style.pointerEvents = 'none';
     let int = setInterval(function(){
         if(fill2 < 100){
             fill2 +=25;
@@ -69,10 +71,10 @@ sellButtonIce.addEventListener('click', function(){
             document.getElementById('iceB').style.pointerEvents = 'auto';
         }
     }, speed2);
-    console.log(int)
 })
 
 sellButtonStraw.addEventListener('click', function(){
+    document.getElementById('strawB').style.pointerEvents = 'none';
     let int = setInterval(function(){
         if(fill3 < 100){
             fill3 +=25;
@@ -90,6 +92,7 @@ sellButtonStraw.addEventListener('click', function(){
 })
 
 sellButtonUmbrella.addEventListener('click', function(){
+    document.getElementById('umbrellaB').style.pointerEvents = 'none';
     let int = setInterval(function(){
         if(fill4 < 100){
             fill4 +=25;
