@@ -116,6 +116,9 @@ upgradeButtonPitcher.addEventListener('click', ()=>{
         money.textContent = `Money: ${accMoney}$`;
         speed1 -= incr;
         ticks1++
+    } 
+    if (ticks1 === 3){
+        document.getElementById('upgradePitcher').textContent = 'MAX'
     }
 })
 
@@ -127,6 +130,9 @@ upgradeButtonIce.addEventListener('click', ()=>{
         speed2 -= incr;
         ticks2++
     }
+    if (ticks2 === 3){
+        document.getElementById('upgradeIce').textContent = 'MAX'
+    }
 })
 
 upgradeButtonStraw.addEventListener('click', ()=>{
@@ -136,6 +142,9 @@ upgradeButtonStraw.addEventListener('click', ()=>{
         money.textContent = `Money: ${accMoney}$`;
         speed3 -= incr;
         ticks3++
+    }
+    if (ticks3 === 3){
+        document.getElementById('upgradeStraw').textContent = 'MAX'
     }
 })
 
@@ -147,7 +156,11 @@ upgradeButtonUmbrella.addEventListener('click', ()=>{
         speed4 -= incr;
         ticks4++
     }
+    if (ticks4 === 3){
+        document.getElementById('upgradeUmbrella').textContent = 'MAX'
+    }
 })
+
 // functions
 
 render();
@@ -161,6 +174,10 @@ function render(){
     money.textContent = `Money: ${accMoney}$`;
     highscore.textContent = `Highscore: ${score}`
     timer.textContent = `Time left: ${time}`;
+    document.getElementById('upgradePitcher').textContent = 'Upgrade -2$'
+    document.getElementById('upgradeIce').textContent = 'Upgrade -4$'
+    document.getElementById('upgradeStraw').textContent = 'Upgrade -6$'
+    document.getElementById('upgradeUmbrella').textContent = 'Upgrade -8$'
 }
 
 function countdown(){
