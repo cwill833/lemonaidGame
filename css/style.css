@@ -29,16 +29,21 @@ home{
 }
 
 section.landing{
-    height: 50%;
-    width: 50%;
+    height: 58%;
+    width: 58%;
     margin-bottom: 8%;
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .4);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     box-shadow: inset 0 0 10px #000000;
 }
+
+#middle h3{
+    font-size: 1.7em;
+}
+
 #top, #middle, #bottom{
     width: 100%;
     display: flex;
@@ -46,6 +51,15 @@ section.landing{
     justify-content: center;
     align-items: center;
 }
+
+#top h1{
+    font-size: 2em;
+}
+
+h4 span{
+    font-size: 1.4em
+}
+
 .homeSell{
     width: 17%;
     height: 30px;

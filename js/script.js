@@ -182,9 +182,9 @@ function countdown(){
                 timer.textContent = `GAME OVER`;
             }else{
                 winner();
-                // highscore.textContent = `Highscore: ${score}`;
                 stop();
                 timer.textContent = `GAME OVER`;
+                
             }
         }
     }, 1000)
