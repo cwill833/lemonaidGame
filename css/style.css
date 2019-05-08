@@ -354,7 +354,7 @@ header h1{
 
 @media only screen and (max-width: 768px){
     html {
-        touch-action: none;
+        touch-action: manipulation;
     }
 
     home, section.game{
