@@ -31,7 +31,7 @@ home{
 section.landing{
     height: 58%;
     width: 58%;
-    margin-bottom: 8%;
+    margin-bottom: 7%;
     background-color: rgba(0, 0, 0, .4);
     display: flex;
     flex-direction: column;
@@ -44,12 +44,31 @@ section.landing{
     font-size: 1.7em;
 }
 
+#top{
+    animation: fadein 3s;
+}
+
+#middle{
+    animation: fadein 8s;
+}
+
+#bottom{
+    animation: fadein 15s;
+}
+
 #top, #middle, #bottom{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    
+}
+
+@keyframes fadein{
+    from{opacity: 0;}
+    to {opacity: 1;}
 }
 
 #top h1{
@@ -63,6 +82,7 @@ h4 span{
 .homeSell{
     width: 17%;
     height: 30px;
+    margin: 2%;
     border-radius: 20px;
     background-color: green;
     display: flex;
@@ -74,6 +94,7 @@ h4 span{
 .homeUpgrade{
     width: 17%;
     height: 30px;
+    margin: 2%;
     border-radius: 20px;
     background-color: pink;
     display: flex;
@@ -83,20 +104,29 @@ h4 span{
 }
 
 #start{
-    height: 20px;
-    width: 50px;
+    height: 24px;
+    width: 64px;
     background-color: green;
     text-align: center;
     border-radius: 10px;
+    cursor:pointer;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 #start:hover{
-    height: 20px;
-    width: 50px;
+    height: 24px;
+    width: 64px;
     background-color: white;
     color: green;
     border-radius: 10px;
     border: 1px solid black;
+}
+
+h6{
+    margin: 1%;
 }
 
 section.game{
@@ -132,7 +162,9 @@ div#time, div#money, div#highscore, div#reset {
     background-color: orange;
 }
 
-
+#reset{
+    cursor:pointer;
+}
 
 #topLevel, #lowerLevel{
     width: 100%;
@@ -198,6 +230,7 @@ div#time, div#money, div#highscore, div#reset {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    cursor:pointer;
 }
 .sell{
     background-color: green;
