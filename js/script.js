@@ -27,8 +27,9 @@ let ticks3 = 0;
 let ticks4 = 0;
 let accMoney = 10;
 let timerrr;
-let time = 10;
+let time = 100;
 let score = 0;
+let compare = 0;
 
 // event listeners
 
@@ -165,32 +166,31 @@ function countdown(){
         timer.textContent = `Time left: ${time}`;
         if(time){
             timer.textContent = `Time left: ${time}`;
+            console.log(score, accMoney)
         }else{
             clearInterval(timerrr);
-            console.log(highscore.textContent.slice(11))
-            if(score < accMoney){
+            compare = accMoney;
+            console.log(score, compare, accMoney, 'new')
+            if(score < compare){
                 winner();
                 score = accMoney;
                 highscore.textContent = `Highscore: ${score}`;
                 stop();
                 timer.textContent = `GAME OVER`;
-            }
-            if(score >= accMoney){
+            }else{
                 winner();
-                score = accMoney;
-                highscore.textContent = `Highscore: ${score}`;
+                // highscore.textContent = `Highscore: ${score}`;
                 stop();
                 timer.textContent = `GAME OVER`;
             }
         }
-    }, 500)
+    }, 1000)
 }
 
 function winner(){
-    if(score < accMoney){
-        swal("Great job!", `You beat your high score and earned ${accMoney}$ dollars! Can you do it again...`, "success")
+    if(score < compare){
+        swal("Great job!", `You beat your highscore of ${score} and earned ${accMoney}$ dollars! Can you do it again...`, "success")
     } else {
-         console.log(score, 'hay')
          swal("AWWWW MAN!", "Almost but you didn't make as much this time...", "error");
      }
 }
@@ -228,7 +228,7 @@ function myButton(){
     ticks3 = 0;
     ticks4 = 0;
     accMoney = 10;
-    time = 10;
+    time = 100;
     render();
     clearInterval(timerrr)
     start();
