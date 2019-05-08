@@ -124,7 +124,8 @@ upgradeButtonPitcher.addEventListener('click', ()=>{
         ticks1++
     } 
     if (ticks1 === 3){
-        document.getElementById('upgradePitcher').textContent = 'MAX'
+        document.getElementById('upgradePitcher').textContent = 'MAX';
+        document.getElementById('upgradePitcher').style.pointerEvents = 'none';
     }
 })
 
@@ -137,7 +138,8 @@ upgradeButtonIce.addEventListener('click', ()=>{
         ticks2++
     }
     if (ticks2 === 3){
-        document.getElementById('upgradeIce').textContent = 'MAX'
+        document.getElementById('upgradeIce').textContent = 'MAX';
+        document.getElementById('upgradeIce').style.pointerEvents = 'none';
     }
 })
 
@@ -150,7 +152,8 @@ upgradeButtonStraw.addEventListener('click', ()=>{
         ticks3++
     }
     if (ticks3 === 3){
-        document.getElementById('upgradeStraw').textContent = 'MAX'
+        document.getElementById('upgradeStraw').textContent = 'MAX';
+        document.getElementById('upgradeStraw').style.pointerEvents = 'none';
     }
 })
 
@@ -163,7 +166,8 @@ upgradeButtonUmbrella.addEventListener('click', ()=>{
         ticks4++
     }
     if (ticks4 === 3){
-        document.getElementById('upgradeUmbrella').textContent = 'MAX'
+        document.getElementById('upgradeUmbrella').textContent = 'MAX';
+        document.getElementById('upgradeUmbrella').style.pointerEvents = 'none';
     }
 })
 
