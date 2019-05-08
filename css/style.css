@@ -19,6 +19,49 @@ aside{
     justify-content: space-around;
 }
 
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+    height: 60%;
+    background: -webkit-linear-gradient(top, #6f68d9, #65d6d4);
+    border-radius: 15px;
+}
+
+div#time, div#money, div#highscore, div#reset {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#reset{
+    width: 60%;
+    height: 30px;
+    cursor:pointer;
+    border-top: 1px solid #98d4f5;
+    background: -webkit-linear-gradient(top, #6f68d9, #65d6d4);
+    padding: 12px 24px;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 15px;
+}
+
+#reset:hover {
+    border-top-color: #cf1b39;
+    background: #cf1b39;
+    color: #ccc;
+}
+
+#reset:active {
+    border-top-color: #470606;
+    background: #470606;
+}
+
 home{
     background: url(../images/67300157-cartoon-lemonade-stand-with-fresh-lemons-and-a-pitcher.jpg) no-repeat;
     background-position: center;
@@ -158,23 +201,6 @@ header{
 
 header h1{
     font-size: 2.5em;
-}
-
-div#time, div#money, div#highscore, div#reset {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-#time, #money, #highscore, #reset{
-    width: 60%;
-    height: 30px;
-    background-color: orange;
-}
-
-#reset{
-    cursor:pointer;
 }
 
 #topLevel, #lowerLevel{
