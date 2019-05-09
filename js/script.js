@@ -1,17 +1,28 @@
 /* --- event handles --- */
 
+// sell buttons
 const sellButtonPitcher = document.getElementById('pitcherB');
 const sellButtonIce = document.getElementById('iceB');
 const sellButtonStraw = document.getElementById('strawB');
 const sellButtonUmbrella = document.getElementById('umbrellaB');
+
+// upgrade buttons
 const upgradeButtonPitcher = document.getElementById('upgradePitcher');
 const upgradeButtonIce = document.getElementById('upgradeIce');
 const upgradeButtonStraw = document.getElementById('upgradeStraw');
 const upgradeButtonUmbrella = document.getElementById('upgradeUmbrella');
+
+// aside info
 const money = document.getElementById('money');
 const timer = document.getElementById('time');
 const highscore = document.getElementById('highscore');
+const reset = document.querySelector('div#reset');
+
+// play button on landing page
 const lets_play = document.getElementById('start');
+
+// last 5 second counter
+const last = document.getElementById('last5');
 
 /* --- cached --- */
 
@@ -35,13 +46,15 @@ let compare = 0;
 
 /* --- event listeners --- */
 
-// this will handle the sell buttons
+// start button
 
 lets_play.addEventListener('click', function(){
     document.querySelector('home').style.display = 'none';
     document.querySelector('.game').style.display = 'flex';
     init();
 })
+
+// this will handle the sell buttons
 
 sellButtonPitcher.addEventListener('click', function(){
     document.getElementById('pitcherB').style.pointerEvents = 'none';
@@ -178,21 +191,28 @@ render();
 function init(){
     render();
     countdown();
+    reset.style.pointerEvents = 'auto'
+    
 }
 
 function render(){
     money.textContent = `Money: ${accMoney}$`;
     highscore.textContent = `Highscore: ${score}`
     timer.textContent = `Time left: ${time}`;
-    document.getElementById('upgradePitcher').textContent = 'Upgrade -2$'
-    document.getElementById('upgradeIce').textContent = 'Upgrade -4$'
-    document.getElementById('upgradeStraw').textContent = 'Upgrade -6$'
-    document.getElementById('upgradeUmbrella').textContent = 'Upgrade -8$'
+    document.getElementById('upgradePitcher').textContent = 'Upgrade -2$';
+    document.getElementById('upgradeIce').textContent = 'Upgrade -4$';
+    document.getElementById('upgradeStraw').textContent = 'Upgrade -6$';
+    document.getElementById('upgradeUmbrella').textContent = 'Upgrade -8$';
 }
 
 function countdown(){
     timerrr = setInterval(function (){
         time--;
+        if(time <= 5){
+            last.style.display = 'block';
+            last.textContent = time;
+            timer.textContent = `Time left: ${time}`;
+        }
         if(time){
             timer.textContent = `Time left: ${time}`;
         }else{
@@ -201,6 +221,7 @@ function countdown(){
             winner();
             stop();
             timer.textContent = `GAME OVER`;
+            last.style.display = 'none';
             if(score < compare){
                 score = accMoney;
                 highscore.textContent = `Highscore: ${score}`;
@@ -243,8 +264,6 @@ function start(){
     document.getElementById('upgradeStraw').style.pointerEvents = 'auto';
     document.getElementById('upgradeUmbrella').style.pointerEvents = 'auto'
 }
-
-// reset button
 
 function myButton(){
     speed1 = 50;
