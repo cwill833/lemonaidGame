@@ -50,6 +50,6 @@ Good news is once you upgrade a certain clicker, the upgraded speed remains for 
 
 I got my inspiration from a game called [AdVenture Capitalist](https://play.google.com/store/apps/details?id=com.kongregate.mobile.adventurecapitalist.google&hl=en_US) so if you enjoyed my game, I highly recommend playing this one!
 
-The game starts off with an instruction page that shows the buttons that will appear and what they do.
-![Landing Page](https://imgur.com/a/kVjuZmZ)
+The game starts off with an instruction page that shows the buttons that will appear and what they do.  
+![Landing Page](https://imgur.com/XsgamvK)
 
