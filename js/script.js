@@ -213,7 +213,7 @@ function winner(){
     if(score < compare){
         swal("Great job!", `You beat your highscore of ${score} and earned ${accMoney}$ dollars! Can you do it again...`, "success")
     } else {
-         swal("AWWWW MAN!", "Almost but you didn't make as much this time...", "error");
+         swal("AWWWW MAN!", `Almost but you didn't make as much this time with only ${accMoney}$ dollars.`, "error");
      }
 }
 
