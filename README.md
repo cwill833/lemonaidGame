@@ -1,11 +1,14 @@
-# lemonaidGame
-Wireframe save = https://wireframe.cc/Jyh39k
+# lemonadeGame
 
-How much lemonade can you sell in 5 min????
+[**Wireframe save**](https://wireframe.cc/Jyh39k)
 
-Pseudocode:
+[**link to game**](https://cwill833.github.io/lemonaidGame/)
 
-You will have 3s:00min  to make as much money as you can.
+# How much lemonade can you sell in 5 min????
+
+Pseudocode: May 1st 2019
+
+You will have 5:00min  to make as much money as you can.
 This will be a high score beater game.
 The game will start with nothing happening just show the buttons you can click.
 
@@ -16,15 +19,6 @@ Player starts out with 10$
 There will be an aside that will display timer countdown with how much time is left in the game and how much money has been accumulated. Also a reset button to play again
 
 The circles will show icons/img of the upgrades that are being purchase.
-
-Grey buttons ={
-First button = lemonade worth 1$ (side button upgrade - which speeds up time but costs money)  
-Second button = ice worth 2$ (side button upgrade - which speeds up time but costs money to unlock) 
-third button = honey worth 3$ (side button upgrade - which speeds up time but costs money to unlock) 
-Forth = straw  worth 5$ (side button upgrade - which speeds up time but costs money to unlock) 
-Fifth = umbrella  worth 11$ (side button upgrade - which speeds up time but costs money to unlock) 
-Sixth = metal cups  worth 25$ (side button upgrade - which speeds up time but costs money to unlock) 
-}
 
 The gray button will need to be pressed in order to active that timer. Once timer completes add specific value to money accumulated. 
 They are all going to have initial timers for completion from shortest time (first button) to longest time(sixth button). 
@@ -44,19 +38,55 @@ These buttons will subtract time off the original button timer each time its cli
 
 }
 
- Code would be something like:
-	let active =  false
-	color = black 
-	cost = $
-	if moneyAcc>= cost  ==> turn green
-	on click turn active true
-	if active  true
-		on click 
-			subtract time from grey button timer
-			subtract money from money acc
-
-
 Once your time has expired, game over, money accumulated is how much money you have accumulated selling lemonade…… can you beat it?
 
+### Above was the thought process of this game on day 1......My how we've grown!
+
+My game is a good old fashion clicker game!  
+The object of the game is to click the sell buttons in order to make as much money as you can within 100 seconds.  
+See above where I first thought 5 minutes was a good idea for play time.... You'll have enough after 100 seconds ;)  
+Now you also have upgrade buttons, however, that cost money and can only be clicked 3 times!  
+Good news is once you upgrade a certain clicker, the upgraded speed remains for the rest of the time.
+
+I got my inspiration from a game called [AdVenture Capitalist](https://play.google.com/store/apps/details?id=com.kongregate.mobile.adventurecapitalist.google&hl=en_US) so if you enjoyed my game, I highly recommend playing this one!
+
+The game starts off with an instruction page that shows the buttons that will appear and what they do.  
+Once you click **start** - it's time to sell lemonade!  
+![Landing Page](https://i.imgur.com/XsgamvK.png)
+
+There are four different items you can sell at the lemonade stand!
+
+ * Lemonade
+ * Lemonade w/ ice
+ * Lemonade w/ straw
+ * Lemonade w/ umbrella
+
+Eachone of these items will take a certain amount of time to complete (the green status bar is time till completion).  
+Once complete, you will earn the money designated in the button clicked.  
+If you feel that it's taking to long to sell, why not try upgrading it! For a small fee of course...Just remember, it can only be clicked 3 times.
+![Game Play](https://i.imgur.com/n0nKViO.png)
+
+If you beat the highscore a nice little window will pop up congratulating you on a job well done!  
+![Great Job](https://i.imgur.com/EePnkRH.png)
+
+If you do not beat the highscore, don't be to hard on yourself! A new day means a new dollar!  
+![Sorry](https://i.imgur.com/DY8zRRz.png)
+
+Once the games over try again with the RESET button! (located on the bottom left) - this will not reset your highscore, unless you refresh the page or close the browser.  
+![Reset Button](https://i.imgur.com/wpzghys.png)
+
+For this project I incorporated:
+
+ * HTML
+ * JavaScript
+ * CSS
+ * a hole bunch of google/MDN/CSS Tricks :)
+
+For Icebox items I plan on ...
+
+ * More CSS Animation when the button finishes the money pops up to show how much was just made
+ * Sounds when buttons are pressed or finished 
+ * A sound for beating the highscore and not
+ * add a countdown for last 5 seconds
 
 
