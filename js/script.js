@@ -193,23 +193,17 @@ function render(){
 function countdown(){
     timerrr = setInterval(function (){
         time--;
-        timer.textContent = `Time left: ${time}`;
         if(time){
             timer.textContent = `Time left: ${time}`;
         }else{
             clearInterval(timerrr);
             compare = accMoney;
+            winner();
+            stop();
+            timer.textContent = `GAME OVER`;
             if(score < compare){
-                winner();
                 score = accMoney;
                 highscore.textContent = `Highscore: ${score}`;
-                stop();
-                timer.textContent = `GAME OVER`;
-            }else{
-                winner();
-                stop();
-                timer.textContent = `GAME OVER`;
-                
             }
         }
     }, 1000)
