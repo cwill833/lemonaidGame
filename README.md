@@ -40,5 +40,16 @@ These buttons will subtract time off the original button timer each time its cli
 
 Once your time has expired, game over, money accumulated is how much money you have accumulated selling lemonade…… can you beat it?
 
+### Above was the thought process of this game on day 1......My how it had grown!
 
+My game is a good old fashion clicker game!  
+The object of the game is to click the sell buttons in order to make as much money as you can within 100 seconds.  
+See above where I first thought 5 minutes was a good idea for play time.... You'll have enough after 100 seconds ;)  
+Now you also have upgrade buttons, however, that cost money and can only be clicked 3 times!  
+Good news is once you upgrade a certain clicker, the upgraded speed remains for the rest of the time.
+
+I got my inspiration from a game called [AdVenture Capitalist](https://play.google.com/store/apps/details?id=com.kongregate.mobile.adventurecapitalist.google&hl=en_US) so if you enjoyed my game, I highly recommend playing this one!
+
+The game starts off with an instruction page that shows the buttons that will appear and what they do.
+![Landing Page](https://imgur.com/a/kVjuZmZ)
 
