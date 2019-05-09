@@ -4,7 +4,7 @@
 
 [**link to game**](https://cwill833.github.io/lemonaidGame/)
 
-# How much lemonade can you sell in 5 min????
+# How much lemonade can you sell in 100 seconds????
 
 Pseudocode: May 1st 2019
 
