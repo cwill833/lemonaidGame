@@ -87,6 +87,6 @@ For Icebox items I plan on ...
  * More CSS Animation when the button finishes the money pops up to show how much was just made
  * Sounds when buttons are pressed or finished 
  * A sound for beating the highscore and not
-
+ * A countdown button for the last 5 seconds that pops up in middle of screen
 
 
