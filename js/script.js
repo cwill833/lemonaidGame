@@ -64,7 +64,7 @@ sellButtonPitcher.addEventListener('click', function(){
                 document.getElementById('grow1').style.width = fill1 + '%';
                 document.getElementById('pitcherB').style.pointerEvents = 'none';
             }else{
-                money.textContent = `Money: ${accMoney+=1}$`;
+                money.textContent = `Money: $${accMoney+=1}`;
                 fill1 = 0;
                 document.getElementById('grow1').style.width = fill1 + '%';
                 clearInterval(int);
@@ -81,7 +81,7 @@ sellButtonIce.addEventListener('click', function(){
             document.getElementById('grow2').style.width = fill2 + '%';
             document.getElementById('iceB').style.pointerEvents = 'none';
         }else{
-            money.textContent = `Money: ${accMoney += 2}$`;
+            money.textContent = `Money: $${accMoney += 2}`;
             fill2 = 0;
             document.getElementById('grow2').style.width = fill2 + '%';
             clearInterval(int);
@@ -98,7 +98,7 @@ sellButtonStraw.addEventListener('click', function(){
             document.getElementById('grow3').style.width = fill3 + '%';
             document.getElementById('strawB').style.pointerEvents = 'none';
         }else{
-            money.textContent = `Money: ${accMoney += 3}$`;
+            money.textContent = `Money: $${accMoney += 3}`;
             fill3 = 0;
             document.getElementById('grow3').style.width = fill3 + '%';
             clearInterval(int);
@@ -116,7 +116,7 @@ sellButtonUmbrella.addEventListener('click', function(){
             document.getElementById('grow4').style.width = fill4 + '%';
             document.getElementById('umbrellaB').style.pointerEvents = 'none';
         }else{
-            money.textContent = `Money: ${accMoney += 4}$`;
+            money.textContent = `Money: $${accMoney += 4}`;
             fill4 = 0;
             document.getElementById('grow4').style.width = fill4 + '%';
             clearInterval(int);
@@ -132,7 +132,7 @@ upgradeButtonPitcher.addEventListener('click', ()=>{
     let incr = 10;
     if (ticks1 <= 2 && accMoney >= 2){
         accMoney -= 2;
-        money.textContent = `Money: ${accMoney}$`;
+        money.textContent = `Money: $${accMoney}`;
         speed1 -= incr;
         ticks1++
     } 
@@ -146,7 +146,7 @@ upgradeButtonIce.addEventListener('click', ()=>{
     let incr = 15;
     if (ticks2 <= 2 && accMoney >= 4){
         accMoney -= 4;
-        money.textContent = `Money: ${accMoney}$`;
+        money.textContent = `Money: $${accMoney}`;
         speed2 -= incr;
         ticks2++
     }
@@ -160,7 +160,7 @@ upgradeButtonStraw.addEventListener('click', ()=>{
     let incr = 20;
     if (ticks3 <= 2 && accMoney >= 6){
         accMoney -= 6;
-        money.textContent = `Money: ${accMoney}$`;
+        money.textContent = `Money: $${accMoney}`;
         speed3 -= incr;
         ticks3++
     }
@@ -174,7 +174,7 @@ upgradeButtonUmbrella.addEventListener('click', ()=>{
     let incr = 35;
     if (ticks4 <= 2 && accMoney >= 8){
         accMoney -= 8;
-        money.textContent = `Money: ${accMoney}$`;
+        money.textContent = `Money: $${accMoney}`;
         speed4 -= incr;
         ticks4++
     }
@@ -196,13 +196,13 @@ function init(){
 }
 
 function render(){
-    money.textContent = `Money: ${accMoney}$`;
+    money.textContent = `Money: $${accMoney}`;
     highscore.textContent = `Highscore: ${score}`
     timer.textContent = `Time left: ${time}`;
-    document.getElementById('upgradePitcher').textContent = 'Upgrade -2$';
-    document.getElementById('upgradeIce').textContent = 'Upgrade -4$';
-    document.getElementById('upgradeStraw').textContent = 'Upgrade -6$';
-    document.getElementById('upgradeUmbrella').textContent = 'Upgrade -8$';
+    document.getElementById('upgradePitcher').textContent = 'Upgrade -$2';
+    document.getElementById('upgradeIce').textContent = 'Upgrade -$4';
+    document.getElementById('upgradeStraw').textContent = 'Upgrade -$6';
+    document.getElementById('upgradeUmbrella').textContent = 'Upgrade -$8';
 }
 
 function countdown(){
